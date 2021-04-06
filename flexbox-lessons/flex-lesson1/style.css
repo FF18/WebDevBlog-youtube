@@ -1,0 +1,54 @@
+.item {
+	height: 100px;
+	width: 100px;
+	background: red;
+	margin: 5px;
+	
+	align-self: flex-start;
+	align-self: flex-end;
+	align-self: center;
+	align-self: space-between;
+	align-self: space-around;
+	align-self: stretch;
+}
+
+.container {
+	display: flex;
+	display: inline-flex;
+	
+	flex-direction: row;
+	flex-direction: row-reverse;
+	flex-direction: column;
+	flex-direction: column-reverse;
+	
+	width: 600px;
+	flex-wrap: nowrap;
+	flex-wrap: wrap;
+	flex-wrap: wrap-reverse;
+	
+	justify-content: center;
+	/* default */
+	justify-content: flex-start; 
+	justify-content: flex-end;
+	justify-content: space-between;
+	justify-content: space-around;
+	
+	align-items: flex-start;
+	align-items: flex-end;
+	align-items: center;
+	align-items: baseline;
+	align-items: stretch;
+	
+	align-content: flex-start;
+	align-content: flex-end;
+	align-content: center;
+	align-content: space-between;
+	align-content: space-around;
+	align-content: stretch;
+	
+	height:500px;
+}
+
+.first {
+	order: -1;
+}

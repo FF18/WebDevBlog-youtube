@@ -1,0 +1,121 @@
+body {
+    border-color: #eee;
+    color: #fff;
+}
+
+h3 {
+    margin: 0;
+}
+
+p {
+    margin-top: 0;
+}
+
+.wrapper {
+    width: 90%;
+    max-width: 940px;
+    margin: 20px auto;
+    border-color: #fff;
+}
+
+.home {
+    display: grid;
+    grid-gap: 1px;
+    grid-auto-rows: minmax(150px, auto);
+}
+
+.home > * {
+    padding: 10px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #999;
+}
+
+.feature {
+    background-image: url(https://images.app.goo.gl/4mSpNH3LQEc5gkgt8);
+    background-position: bottom left;
+}
+
+.photos {
+    background-image: url(https://www.pexels.com/photo/sea-water-ocean-summer-5008362/);
+}
+
+.news {
+    background-image: url(https://www.pexels.com/photo/stack-of-newspapers-3866816/);
+}
+
+.special {
+    background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.8)),url(https://pxhere.com/en/photo/603128);
+    display: flex;
+    flex-direction: column;
+}
+
+.special h3,
+.amazing h3 {
+    margin-top: auto;
+}
+
+.amazing {
+    background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.9)),url(https://www.pexels.com/video/6207786/);
+    display: flex;
+    flex-direction: column;
+}
+
+.cta {
+    background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.8)),url(https://www.pexels.com/photo/smiling-female-florist-talking-on-phone-in-floristry-shop-5414041/);
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 500px) {
+    .home {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .feature {
+        grid-column: 1 / 3;
+        grid-row: 1 / 3;
+    }
+
+    .special {
+        grid-column: 1;
+        grid-row: 3 / 6;
+    }
+
+    .amazing {
+        grid-column: 1;
+        grid-row: 6;
+    }
+
+    .cta {
+        grid-column: 2;
+        grid-row: 5 / 7;
+    }
+}
+
+@media (min-width: 800px) {
+    .home {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: minmax(150px auto) minmax(150px auto);
+    }
+
+    .feature {
+        grid-column: 1;
+        grid-row: 1 / 6;
+    }
+
+    .special {
+        grid-column: 2;
+        grid-row: 1 / 4;
+    }
+
+    .amazing {
+        grid-column: 2;
+        grid-row: 4 / 6;
+    }
+
+    .cta {
+        grid-column: 3;
+        grid-row: 3 / 6;
+    }
+}

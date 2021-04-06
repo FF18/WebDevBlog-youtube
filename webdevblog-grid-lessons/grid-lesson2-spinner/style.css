@@ -1,0 +1,56 @@
+@keyframes spinner {
+	100% {
+		transform: rotate(3600deg);
+	}
+}
+
+.container {
+	margin: 0 auto;
+	text-align: center;
+	position: relative;
+	top: 50vh;
+	/* transform - для поворота и масштабирования элементов  */
+	/* translateY(-50%) - выравниваем элементы по вертикали */
+	transform: translateY(-50%);
+}
+
+.spinner {
+	/* позволяет установить ширину и высоту элемента; */
+	/* соблюдаются верхнее и нижнее margins/paddings; */
+	/* после элемента не добавляется разрыв строки (line-break). */
+	display: inline-block;
+	width: 100px;
+	height: 100px;
+	background: url(https://imgur.com/oSHLAzp.png) center center;
+	-webkit-background-size: contain;
+	/* contain - масштабирует изображение так чтобы картинка  */
+	/* с сохранением пропорций поместилась целиком внутри блока */
+	background-size: contain;
+	/* устанавливает координаты точки относительно которой  */
+	/* будет происходить трансформация элемента  */
+	transform-origin: 50% 50%;
+	/* infinite - бесконечное повторение анимации */
+	/* alternate - анимация будет работать от начала до конца  */
+	/* а потом в обратном направлении */
+	/* ease-in-out - плавное скольжение  */
+	animation: spinner 3s infinite alternate ease-in-out;
+}
+
+.center-spinner {
+	display:inline-block;
+	position: absolute;
+	margin-left: -100px;
+	width: 100px;
+	height: 100px;
+	background: url(https://i.imgur.com/u0BC2ZR.png) center center;
+	background-size: contain;
+	content: '';
+}
+
+.text {
+	/* относительно родителя */
+	position: relative;
+	z-index: 1;
+	font-size: 30px;
+	font-family: Uni sans;
+}
